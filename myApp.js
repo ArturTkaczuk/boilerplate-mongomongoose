@@ -81,9 +81,9 @@ const findEditThenSave = (personId, done) => {
       console.error(err);
     }
 
-    person.favoriteFoods.push("hamburger");
+    Person.favoriteFoods.push("hamburger");
 
-    person.save((err, updatedPerson) => {
+    Person.save((err, updatedPerson) => {
       if (err) return console.log(err);
       done(null, updatedPerson);
     });
